@@ -4,7 +4,6 @@
 	padding: 2rem;
 	text-align: center;
 }
-
 .logo {
 	height: 6em;
 	padding: 1.5em;
@@ -34,6 +33,9 @@
 @media (prefers-reduced-motion: no-preference) {
 	a:nth-of-type(2) .logo {
 		animation: logo-spin infinite 20s linear;
+	}
+	 a:nth-of-type(3) .logo {
+		animation: logo-spin infinite 5s linear;
 	}
 }
 
