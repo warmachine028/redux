@@ -1,7 +1,7 @@
 version: 2
 updates:
   - package-ecosystem: github-actions #! for github-actions
-    directory: "/"
+    directory: ".github"
     schedule:
       interval: daily
       time: '21:00'
