@@ -29,11 +29,11 @@ const Form = () => {
 					onChange={handleChange}
 					id="text"
 					name="text"
-					className="h-12 rounded-md p-2 placeholder:italic w-full"
+					className="h-12 rounded-md p-2 placeholder:italic w-full bg-slate-700 text-white dark:bg-gray-950"
 					value={formData.text}
 				/>
 			</div>
-			<button type="submit" className="rounded-md bg-purple-700">
+			<button type="submit" className="rounded-md bg-purple-700 text-white">
 				Add Todo
 			</button>
 		</form>

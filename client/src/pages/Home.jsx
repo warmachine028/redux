@@ -5,10 +5,8 @@ import viteLogo from '/vite.svg'
 import '../styles/Home.css'
 
 const Home = () => {
-	const [count, setCount] = useState(0)
-
 	return (
-		<main className='app'>
+		<main className="app">
 			<div className="flex justify-center">
 				<a href="https://vitejs.dev" target="_blank">
 					<img src={viteLogo} className="logo" alt="Vite logo" />
@@ -22,10 +20,9 @@ const Home = () => {
 			</div>
 			<h1>Vite + React + Redux</h1>
 			<div className="card">
-				<div className="flex gap-2 justify-center my-3">
-					<button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
+				<div className="my-3 flex justify-center gap-2">
 					<button>
-						<Link to="/todos" className="text-white hover:text-white">
+						<Link to="/todos" className="text-inherit hover:text-inherit">
 							Todos
 						</Link>
 					</button>
