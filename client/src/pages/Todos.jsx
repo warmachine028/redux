@@ -16,7 +16,7 @@ const Todos = () => {
 				</Link>
 			</div>
 			<Form />
-			<ul className="flex w-full flex-col gap-3">
+			<ul className="flex w-full flex-col gap-3 px-4 sm:p-0 md:p-10">
 				{todos?.map((todo) => (
 					<Todo key={todo.id} data={todo} />
 				))}

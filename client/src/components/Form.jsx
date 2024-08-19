@@ -1,11 +1,13 @@
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { create as createTodo } from '../reducers/todo'
+
 const Form = () => {
 	const initialData = { text: '' }
 	const dispatch = useDispatch()
 	const [formData, setFormData] = useState(initialData)
 	const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value })
+	
 	const handleSubmit = (e) => {
 		e.preventDefault()
 		dispatch(createTodo(formData))
