@@ -1,7 +1,7 @@
     updated on: 19th August 2024, Monday
 
 <div align=center>
-    <a href="reduux.vercel.app" target="_blank">
+    <a href="https://reduux.vercel.app" target="_blank">
         <img width="200" src="https://redux.js.org/img/redux.svg" alt="redux">
     </a>
     <p style="font-family: roboto, calibri; font-size:12pt; font-style:italic"> A repository to learn redux </p>
