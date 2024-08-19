@@ -1,11 +1,11 @@
     updated on: 19th August 2024, Monday
 
 <div align=center>
-    <a href="https://github.com/warmachine028/redux">
+    <a href="https://reduux.vercel.app" target="_blank">
         <img width="200" src="https://redux.js.org/img/redux.svg" alt="redux">
     </a>
     <p style="font-family: roboto, calibri; font-size:12pt; font-style:italic"> A repository to learn redux </p>
-    <a src="https://github.com/warmachine028/redux/forks">
+    <a src="https://github.com/warmachine028/redux/forks" target="_blank">
         <img alt="GitHub forks" src="https://img.shields.io/github/forks/warmachine028/redux">
     </a>
 </div>
@@ -60,7 +60,7 @@
 ## Best Contributors
 
 <div align="center">
-    <a href="https://github.com/warmachine028/redux/graphs/contributors">
+    <a href="https://github.com/warmachine028/redux/graphs/contributors" target="_blank">
         <img src="https://contrib.rocks/image?repo=warmachine028/redux" alt="contributors"/>
     </a>
 </div>
