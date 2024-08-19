@@ -3,7 +3,7 @@ import { createSlice, nanoid } from '@reduxjs/toolkit'
 const initialState = {
 	todos: [
 		{
-			id: 1,
+			id: nanoid(),
 			text: 'Get the trash out',
 			completed: false
 		}
@@ -17,11 +17,12 @@ export const slice = createSlice({
 		create: (state, action) => {
 			const todo = {
 				id: nanoid(),
+				completed: false,
 				...action.payload
 			}
 			state.todos.push(todo)
 		},
-		delete: (state, action) => {
+		remove: (state, action) => {
 			state.todos = state.todos.filter((todo) => todo.id !== action.payload.id)
 		},
 		update: (state, action) => {
@@ -34,5 +35,5 @@ export const slice = createSlice({
 	}
 })
 
-export const { create, update, delete: _delete } = slice.actions
+export const { create, update, remove } = slice.actions
 export default slice.reducer

@@ -8,7 +8,7 @@ const Home = () => {
 	const [count, setCount] = useState(0)
 
 	return (
-		<main className="app">
+		<main className='app'>
 			<div className="flex justify-center">
 				<a href="https://vitejs.dev" target="_blank">
 					<img src={viteLogo} className="logo" alt="Vite logo" />
@@ -26,7 +26,7 @@ const Home = () => {
 					<button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
 					<button>
 						<Link to="/todos" className="text-white hover:text-white">
-							Todo
+							Todos
 						</Link>
 					</button>
 				</div>
