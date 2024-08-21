@@ -10,10 +10,14 @@ const initialState = {
 export const login = createAsyncThunk(
 	'user/login', // prefix
 	async (credentials) => {
-		const response = await axios.post('https://www.example.com/auth/login', credentials)
-		const data = await response.json()
-		localStorage.setItem('user', JSON.stringify(data))
-		return data
+		try {
+			const response = await axios.post('https://phoenix-server.vercel.app/auth/signin', credentials)
+			const { data } = response
+			return data
+		} catch (error) {
+			const { data } = error.response
+			throw new Error(data.error)
+		}
 	}
 )
 export const slice = createSlice({
@@ -30,13 +34,14 @@ export const slice = createSlice({
 				state.loading = false
 				state.user = action.payload
 				state.error = null
+				localStorage.setItem('user', JSON.stringify(state.user))
+				toast.success('Logged in successfully')
 			}) //
 			.addCase(login.rejected, (state, action) => {
 				state.loading = false
 				state.user = null
 				state.error = action.error
-				console.error(action.error)
-				toast.error(action.error.message)
+				toast.error(state.error.message)
 			})
 	}
 

@@ -14,7 +14,7 @@ const LogIn = () => {
 		dispatch(login(formData))
 	}
 	return (
-		<main className="flex w-screen flex-col items-center p-5 py-40 sm:w-auto sm:min-w-96 mt-0">
+		<main className="mt-0 flex w-screen flex-col items-center p-5 py-40 sm:w-auto sm:min-w-96">
 			<div className="flex w-full justify-between sm:w-96">
 				<Link to={-1} className="flex items-center gap-2 text-white">
 					<IoArrowBack className="size-6" />
