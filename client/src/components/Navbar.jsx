@@ -1,9 +1,23 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { twMerge } from 'tailwind-merge'
+import { TbBrandRedux } from 'react-icons/tb'
+import { useDispatch, useSelector } from 'react-redux'
+import { logout } from '../reducers/user'
 
 const Navbar = () => {
 	const [scrollingDown, setScrollingDown] = useState(false)
+	const dispatch = useDispatch()
+	const reducer = useSelector((state) => state.userReducer)
+	const location = useLocation()
+	const currentUser = reducer.user
+	const inAuth = location.pathname === '/login'
+
+	const handleLogout = (event) => {
+		event.preventDefault()
+		dispatch(logout())
+	}
+
 	useEffect(() => {
 		const handleScroll = () => {
 			const scrollTop = window.scrollY
@@ -19,6 +33,7 @@ const Navbar = () => {
 		// Clean up event listener
 		return () => window.removeEventListener('scroll', handleScroll)
 	}, [])
+
 	return (
 		<header
 			className={twMerge(
@@ -26,8 +41,13 @@ const Navbar = () => {
 				scrollingDown && 'shadow-lg'
 			)}
 		>
-			<div className="" />
-			<Link to="/login">Login</Link>
+			<Link to="/" className="inline-flex items-center gap-2">
+				Redux
+				<span>
+					<TbBrandRedux />
+				</span>
+			</Link>
+			{!inAuth && (currentUser ? <button onClick={handleLogout}>Logout</button> : <Link to="/login">Login</Link>)}
 		</header>
 	)
 }

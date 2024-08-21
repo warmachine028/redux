@@ -1,9 +1,8 @@
+import { useSelector } from 'react-redux'
 import { Navigate } from 'react-router-dom'
-// import { useAuth } from '../hooks'
 
 const Private = ({ component }) => {
-    // const { user } = useAuth()
-    const user = {}
+	const { user } = useSelector((state) => state.userReducer)
 	return user ? component : <Navigate to="/login" />
 }
 

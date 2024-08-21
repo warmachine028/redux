@@ -4,7 +4,7 @@ import { toast } from 'react-toastify'
 
 const initialState = {
 	loading: false,
-	user: null,
+	user: localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : null,
 	error: null
 }
 export const login = createAsyncThunk(
@@ -20,6 +20,14 @@ export const login = createAsyncThunk(
 		}
 	}
 )
+
+export const logout = createAsyncThunk(
+	'user/loout', // prefix
+	async () => {
+		localStorage.removeItem('user')
+	}
+)
+
 export const slice = createSlice({
 	name: 'user',
 	initialState,
@@ -38,6 +46,22 @@ export const slice = createSlice({
 				toast.success('Logged in successfully')
 			}) //
 			.addCase(login.rejected, (state, action) => {
+				state.loading = false
+				state.user = null
+				state.error = action.error
+				toast.error(state.error.message)
+			})
+			.addCase(logout.pending, (state) => {
+				state.loading = true
+				state.error = null
+			}) //
+			.addCase(logout.fulfilled, (state) => {
+				state.loading = false
+				state.user = null
+				state.error = null
+				toast.success('Logged out successfully')
+			}) //
+			.addCase(logout.rejected, (state, action) => {
 				state.loading = false
 				state.user = null
 				state.error = action.error
