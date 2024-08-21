@@ -3,19 +3,22 @@ import { Link, useLocation } from 'react-router-dom'
 import { twMerge } from 'tailwind-merge'
 import { TbBrandRedux } from 'react-icons/tb'
 import { useDispatch, useSelector } from 'react-redux'
-import { logout } from '../reducers/user'
+import { logout } from '../reducers/auth'
+import { toast } from 'react-toastify'
 
 const Navbar = () => {
 	const [scrollingDown, setScrollingDown] = useState(false)
 	const dispatch = useDispatch()
-	const reducer = useSelector((state) => state.userReducer)
+	const reducer = useSelector((state) => state.authReducer)
 	const location = useLocation()
 	const currentUser = reducer.user
 	const inAuth = location.pathname === '/login'
 
 	const handleLogout = (event) => {
 		event.preventDefault()
-		dispatch(logout())
+		dispatch(logout()).then(() => {
+			toast.success('Logged out successfully')
+		})
 	}
 
 	useEffect(() => {
