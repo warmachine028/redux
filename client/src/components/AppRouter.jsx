@@ -1,7 +1,6 @@
 import { Routes, Route, useLocation } from 'react-router-dom'
-import { Home, NotFound, Todos } from '../pages'
+import { Home, NotFound, Todos, LogIn } from '../pages'
 import { AuthRoute, PrivateRoute } from '../routes'
-import LogIn from '../pages/Login'
 
 const AppRouter = () => {
 	const location = useLocation()
