@@ -1,4 +1,4 @@
-    updated on: 24th September 2024, Tuesday
+    updated on: 25th September 2024, Wednesday
 
 <div align=center>
     <a href="https://reduux.vercel.app" target="_blank">
@@ -88,4 +88,4 @@
 [line]: https://user-images.githubusercontent.com/75939390/137615281-3a875960-92cc-407f-97fe-fd2319bdb252.png
 [License]: https://github.com/warmachine028/redux/blob/main/LICENSE
 
-<!-- 24/09/24 -->
+<!-- 25/09/24 -->
