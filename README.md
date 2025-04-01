@@ -1,4 +1,4 @@
-    updated on: 31st March 2025, Monday
+    updated on: 01st April 2025, Tuesday
 
 <div align=center>
     <a href="https://reduux.vercel.app" target="_blank">
@@ -88,4 +88,4 @@
 [line]: https://user-images.githubusercontent.com/75939390/137615281-3a875960-92cc-407f-97fe-fd2319bdb252.png
 [License]: https://github.com/warmachine028/redux/blob/main/LICENSE
 
-<!-- 31/03/25 -->
+<!-- 01/04/25 -->
