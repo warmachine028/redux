@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router'
 import { IoArrowBack, IoHomeSharp } from 'react-icons/io5'
 import { useDispatch, useSelector } from 'react-redux'
 import { toast } from 'react-toastify'

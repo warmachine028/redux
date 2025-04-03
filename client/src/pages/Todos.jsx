@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux'
 import { Form, Todo } from '../components'
 import { FaHome } from 'react-icons/fa'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router'
 
 const Todos = () => {
 	const reducer = useSelector((state) => state.todoReducer)

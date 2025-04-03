@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux'
-import { Navigate } from 'react-router-dom'
+import { Navigate } from 'react-router'
 
 const Private = ({ component }) => {
 	const { user } = useSelector((state) => state.authReducer)
